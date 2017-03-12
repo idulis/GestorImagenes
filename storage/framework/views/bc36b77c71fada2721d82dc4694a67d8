@@ -1,0 +1,53 @@
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="panel panel-default">
+				<div class="panel-heading">Nuevo Album</div>
+				<div class="panel-body">
+					<?php if(count($errors) > 0): ?>
+						<div class="alert alert-danger">
+							<strong>Whoops!</strong> Al parecer algo está mal.<br><br>
+							<ul>
+								<?php foreach($errors->all() as $error): ?>
+									<li><?php echo e($error); ?></li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+					<!-- ./ cambio: action="" -->
+					<form class="form-horizontal" role="form" method="POST" action="/validado/albumes/crear-album">
+						<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Nombre</label>
+							<div class="col-md-6">
+								<!-- ./ cambio: value = value: para mantener lo escrito por el usuario. -->
+								<input type="text" class="form-control" name="nombre" value="<?php echo e(old('nombre')); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Descripción</label>
+							<div class="col-md-6">
+								<!-- ./ cambio: value = para mantener lo escrito por el usuario. -->
+								<input type="text" class="form-control" name="descripcion" value="<?php echo e(old('descripcion')); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-6 col-md-offset-4">
+								<button type="submit" class="btn btn-primary">
+									Crear
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

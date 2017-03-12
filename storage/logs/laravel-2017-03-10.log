@@ -1,0 +1,14 @@
+[2017-03-10 22:59:03] local.ERROR: exception 'ErrorException' with message 'file_put_contents(C:\xampp\htdocs\GestorImagenes/bootstrap/cache/services.json): failed to open stream: No such file or directory' in C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:81
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 81, Array)
+#1 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(81): file_put_contents('C:\\xampp\\htdocs...', '{\n    "provider...', 0)
+#2 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('C:\\xampp\\htdocs...', '{\n    "provider...')
+#3 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(507): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\Bootstrap\RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(208): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 C:\xampp\htdocs\GestorImagenes\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(105): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 C:\xampp\htdocs\GestorImagenes\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
