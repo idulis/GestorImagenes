@@ -1,0 +1,2 @@
+# GestorImagenes
+Gestor de imágenes
